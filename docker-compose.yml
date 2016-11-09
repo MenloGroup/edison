@@ -1,0 +1,12 @@
+version: '2'
+services:
+  edison:
+    env_file: .env
+    build: .
+    command: bin/hubot -a slack
+    volumes:
+      - .:/opt/bot
+    links:
+      - redis
+  redis:
+    image: redis
