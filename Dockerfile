@@ -8,6 +8,6 @@ RUN wget -q -O - https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y git build-essential nodejs
 RUN rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8080
+EXPOSE 80
 
 WORKDIR ${BOTDIR}
